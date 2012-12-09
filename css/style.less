@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+
+//Namespaces
+
+.opacity {
+	filter: alpha(opacity=0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	opacity: 0;
+}
+
+// end Namespaces
+
+html {
+	background: url("../img/bg.png") repeat scroll 0 0 transparent;
+}
+
+form {
+	margin: 100px auto;
+	width: 320px;
+	label {
+		display: block;
+		float: left;
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 16px;
+		text-indent: 4px;
+	}
+
+	input {
+		.opacity;
+		border: 0 none;
+		float: left;
+		height: 16px;
+		position: relative;
+		width: 16px;
+		&:focus,
+		&:active {
+			border: 0 none;
+			outline: 0 none;
+		}
+	}
+}
+
+ul {
+	li {
+		display: block;
+		float: left;
+		margin: 5px 0;
+		position: relative;
+		width: 100%;
+		span {
+			background: url("../img/icns-forms-elements.png") no-repeat scroll transparent;
+			display: block;
+			height: 16px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			text-indent: -9999px;
+			width: 16px;
+		}
+		&.checkboxes {
+			span {
+				background-position: 0 0;
+				&.checked {
+					background-position: -16px -16px;
+				}
+			}
+		}
+		&.radios {
+			span {
+				background-position: -32px -32px;
+				&.radio {
+					background-position: -48px -48px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+

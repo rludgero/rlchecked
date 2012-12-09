@@ -1,0 +1,65 @@
+@charset "utf-8";
+.opacity {
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+}
+html {
+  background: url("../img/bg.png") repeat scroll 0 0 transparent;
+}
+form {
+  margin: 100px auto;
+  width: 320px;
+}
+form label {
+  display: block;
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 16px;
+  text-indent: 4px;
+}
+form input {
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  border: 0 none;
+  float: left;
+  height: 16px;
+  position: relative;
+  width: 16px;
+}
+form input:focus,
+form input:active {
+  border: 0 none;
+  outline: 0 none;
+}
+ul li {
+  display: block;
+  float: left;
+  margin: 5px 0;
+  position: relative;
+  width: 100%;
+}
+ul li span {
+  background: url("../img/icns-forms-elements.png") no-repeat scroll transparent;
+  display: block;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-indent: -9999px;
+  width: 16px;
+}
+ul li.checkboxes span {
+  background-position: 0 0;
+}
+ul li.checkboxes span.checked {
+  background-position: -16px -16px;
+}
+ul li.radios span {
+  background-position: -32px -32px;
+}
+ul li.radios span.radio {
+  background-position: -48px -48px;
+}
