@@ -1,18 +1,18 @@
 /*
-* Author: Rodrigo Ludgero
+* Author: Rodrigo Ludgero http://rodrigoludgero.com/
 *
 * Description: A jQuery checkboxes and radio buttons plugin
 *
+* License: MIT licensed
+*
 * Project: jQuery RLChecked Plugin https://github.com/rludgero/rlchecked
 *
-* License: MIT licensed, (c) 2012 http://rodrigoludgero.com/
 *
 */
 
 
 jQuery.fn.rlChecked = function (){
 
-  return this.each(function (){
 
   // CHECK BOXES and RADIO BUTTONS
 
@@ -65,7 +65,5 @@ jQuery.fn.rlChecked = function (){
         jQuery(this).click().siblings("span").addClass("radio");
       }
     });
-
-  });
 
 };
