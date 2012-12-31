@@ -1,9 +1,11 @@
 @charset "utf-8";
+/* Mixins */
 .opacity {
   filter: alpha(opacity=0);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   opacity: 0;
 }
+/* end Mixins */
 html {
   background: url("../img/bg.png") repeat scroll 0 0 transparent;
 }
