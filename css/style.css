@@ -11,7 +11,7 @@ form {
   margin: 100px auto;
   width: 320px;
 }
-form label {
+label {
   display: block;
   float: left;
   font-size: 16px;
@@ -19,7 +19,8 @@ form label {
   line-height: 16px;
   text-indent: 4px;
 }
-form input {
+.checkboxes input,
+.radios input {
   filter: alpha(opacity=0);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   opacity: 0;
@@ -29,8 +30,10 @@ form input {
   position: relative;
   width: 16px;
 }
-form input:focus,
-form input:active {
+.checkboxes input:focus,
+.radios input:focus,
+.checkboxes input:active,
+.radios input:active {
   border: 0 none;
   outline: 0 none;
 }
