@@ -36,23 +36,23 @@ A jQuery checkboxes and radio buttons plugin
 
 
 <p>How to implement:</p>
-    
+
     <script>
       jQuery(function() {
         jQuery("input").rlChecked();
       });
     </script>
-    
+
 
 <h2>License</h2>
-<p>Copyright (c) 2012 Rodrigo Ludgero Licensed under the MIT license</p>
+<p>Copyright (c) 2013 Rodrigo Ludgero Licensed under the MIT license</p>
 
 <pre>
 <code>
 
 The MIT License
 
-Copyright (c) 2012 Rodrigo Ludgero, http://rodrigoludgero.com
+Copyright (c) 2013 Rodrigo Ludgero, http://rodrigoludgero.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
