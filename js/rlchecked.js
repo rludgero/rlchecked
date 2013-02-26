@@ -5,66 +5,69 @@
 *
 * License: MIT licensed
 *
-* Project: jQuery RLChecked Plugin https://github.com/Rodrigo-Ludgero
+* Project: jQuery rlChecked Plugin https://github.com/Rodrigo-Ludgero
 *
 *
 */
+(function( $ ){
+
+$.fn.rlChecked = function() {
+
+	// add element before inputs type
+	$("input[type=checkbox], input[type=radio]").before("<span>elements</span>");
+
+	return this.each(function() {
+
+		// CHECK BOXES and RADIO BUTTONS
 
 
-jQuery.fn.rlChecked = function() {
+		// CHECK BOXES
 
-  // CHECK BOXES and RADIO BUTTONS
+			// add class to the parent
+			$("input[type=checkbox]").parents("li").addClass("checkboxes");
 
-    // add element before inputs
-    jQuery("input[type=checkbox], input[type=radio]").before("<span>elements</span>");
+			// parse if ckeckboxes is checked
+			$("input[type=checkbox]").each(function() {
+				if($(this).is(":checked")) {
+					$(this).siblings("span").addClass("checked");
+				}
+			});
 
-
-   // CHECK BOXES
-
-    // add class to the parent
-    jQuery("input[type=checkbox]").parents("li").addClass("checkboxes");
-
-    // parse if ckeckboxes is checked
-    jQuery("input[type=checkbox]").each(function() {
-      if(jQuery(this).is(":checked")) {
-        jQuery(this).siblings("span").addClass("checked");
-      }
-    });
-
-    // change behavior when trigger event
-    jQuery("input[type=checkbox]").change(function() {
-      if( jQuery(this).is(":checked")) {
-        jQuery(this).siblings("span").addClass("checked");
-      }
-      else {
-        jQuery(this).siblings("span").removeClass("checked");
-      }
-    });
+			// change behavior when trigger event
+			$("input[type=checkbox]").change(function() {
+				if($(this).is(":checked")) {
+					$(this).siblings("span").addClass("checked");
+				}
+				else {
+					$(this).siblings("span").removeClass("checked");
+				}
+			});
 
 
-  // RADIO BUTTONS
+		// RADIO BUTTONS
 
-    // add class to the parent
-    jQuery("input[type=radio]").parents("li").addClass("radios");
+			// add class to the parent
+			$("input[type=radio]").parents("li").addClass("radios");
 
-    // parse if radiobuttons is checked
-    jQuery("input[type=radio]").each(function() {
-      if(jQuery(this).is(":checked")) {
-        jQuery(this).siblings("span").addClass("radio");
-      }
-    });
+			// parse if radiobuttons is checked
+			$("input[type=radio]").each(function() {
+				if($(this).is(":checked")) {
+					$(this).siblings("span").addClass("radio");
+				}
+			});
 
-    // change behavior when trigger event
-    jQuery("input[type=radio]").change(function() {
-      if( jQuery(this).is(":checked")) {
-        jQuery(this).parents().find(".radio").removeClass("radio");
-        jQuery(this).siblings("span").addClass("radio");
-      }
-      else {
-        jQuery(this).click().siblings("span").addClass("radio");
-      }
-    });
+			// change behavior when trigger event
+			$("input[type=radio]").change(function() {
+				if($(this).is(":checked")) {
+					$(this).parents().find(".radio").removeClass("radio");
+					$(this).siblings("span").addClass("radio");
+				}
+				else {
+					$(this).click().siblings("span").addClass("radio");
+				}
+			});
 
-  return this;
-
+	});
 };
+
+})( jQuery );
