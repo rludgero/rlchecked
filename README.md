@@ -10,38 +10,59 @@ A jQuery checkboxes and radio buttons plugin
 
 <h3>HTML</h3>
 
-    <ul>
-      <li>
-        <input checked="checked" type="checkbox" name="ckbx" />
-        <label for="check">Full</label>
-      </li>
-      <li>
-        <input type="checkbox" name="ckbx" />
-        <label for="check">Empty</label>
-      </li>
-      <li>
-        <input type="radio" name="radio" />
-        <label for="odd">Odd</label>
-      </li>
-      <li>
-        <input checked="checked" type="radio" name="radio" />
-        <label for="even">Even</label>
-      </li>
-    </ul>
+		<ul>
+			<li>
+				<input checked="checked" type="checkbox" name="ckbx" />
+				<label for="check">Full</label>
+			</li>
+			<li>
+				<input type="checkbox" name="ckbx" />
+				<label for="check">Empty</label>
+			</li>
+			<li>
+				<input type="radio" name="radio" />
+				<label for="odd">Odd</label>
+			</li>
+			<li>
+				<input checked="checked" type="radio" name="radio" />
+				<label for="even">Even</label>
+			</li>
+		</ul>
 
+		<!-- or change for your html structure -->
 
 <h3>JS</h3>
 
 
-
-
 <p>How to implement:</p>
 
-    <script>
-      jQuery(function() {
-        jQuery("input").rlChecked();
-      });
-    </script>
+		<script>
+
+			$(function() {
+
+				$("input").rlChecked();
+
+				// or with options
+				$("input").rlChecked({
+
+					element: "<span>elements</span>", // html tag created to insert through the DOM
+					checkboxes: "checkboxes", // parent class of checkboxes
+					radios: "radios", // parent class of radio buttons
+					tag: "li", // html tag parent for checkboxes and radio buttons
+					bg: "span", // reference a settings.element for make use like a variable
+					check: "checked", // sign a class when a checkbox is checked
+					radio: "radio" // sign a class when a radio button is checked
+
+				});
+
+			});
+
+		</script>
+
+
+<h2>Demo:</h2>
+
+<p>http://rodrigoludgero.com/rlchecked/rlchecked.html</p>
 
 
 <h2>License</h2>
