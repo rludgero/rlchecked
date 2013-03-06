@@ -11,10 +11,22 @@
 */
 (function( $ ){
 
-$.fn.rlChecked = function() {
+$.fn.rlChecked = function(options) {
+
+	var settings = $.extend({
+		element: "<span>elements</span>", // html tag created to insert through the DOM
+		checkboxes: "checkboxes", // parent class of checkboxes
+		radios: "radios", // parent class of radio buttons
+		tag: "li", // html tag parent for checkboxes and radio buttons
+		bg: "span", // reference a settings.element for make use like a variable
+		check: "checked", // sign a class when a checkbox is checked
+		radio: "radio" // sign a class when a radio button is checked
+
+	}, options);
+
 
 	// add element before inputs type
-	$("input[type=checkbox], input[type=radio]").before("<span>elements</span>");
+	$("input[type=checkbox], input[type=radio]").before(settings.element);
 
 	return this.each(function() {
 
@@ -24,22 +36,22 @@ $.fn.rlChecked = function() {
 		// CHECK BOXES
 
 			// add class to the parent
-			$("input[type=checkbox]").parents("li").addClass("checkboxes");
+			$("input[type=checkbox]").parents(settings.tag).addClass(settings.checkboxes);
 
 			// parse if ckeckboxes is checked
 			$("input[type=checkbox]").each(function() {
 				if($(this).is(":checked")) {
-					$(this).siblings("span").addClass("checked");
+					$(this).siblings(settings.bg).addClass(settings.check);
 				}
 			});
 
 			// change behavior when trigger event
 			$("input[type=checkbox]").change(function() {
 				if($(this).is(":checked")) {
-					$(this).siblings("span").addClass("checked");
+					$(this).siblings(settings.bg).addClass(settings.check);
 				}
 				else {
-					$(this).siblings("span").removeClass("checked");
+					$(this).siblings(settings.bg).removeClass(settings.check);
 				}
 			});
 
@@ -47,23 +59,23 @@ $.fn.rlChecked = function() {
 		// RADIO BUTTONS
 
 			// add class to the parent
-			$("input[type=radio]").parents("li").addClass("radios");
+			$("input[type=radio]").parents(settings.tag).addClass(settings.radios);
 
 			// parse if radiobuttons is checked
 			$("input[type=radio]").each(function() {
 				if($(this).is(":checked")) {
-					$(this).siblings("span").addClass("radio");
+					$(this).siblings(settings.bg).addClass(settings.radio);
 				}
 			});
 
 			// change behavior when trigger event
 			$("input[type=radio]").change(function() {
 				if($(this).is(":checked")) {
-					$(this).parents().find(".radio").removeClass("radio");
-					$(this).siblings("span").addClass("radio");
+					$(this).parents().find(settings.bg).removeClass(settings.radio);
+					$(this).siblings(settings.bg).addClass(settings.radio);
 				}
 				else {
-					$(this).click().siblings("span").addClass("radio");
+					$(this).click().siblings(settings.bg).addClass(settings.radio);
 				}
 			});
 
