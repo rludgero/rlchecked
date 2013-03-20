@@ -1,7 +1,7 @@
 RLChecked
 =========
 
-A jQuery checkboxes and radio buttons plugin with accessibility navigation
+A jQuery checkboxes and radio buttons plugin with keyboard accessibility navigation
 
 <h2>About</h2>
 <p>rlChecked is a small, clean and efficient plugin cross-browser and keyboard accessible, tested even IE7.</p>
