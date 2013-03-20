@@ -1,36 +1,115 @@
 @charset "utf-8";
-/* Mixins */
-.opacity {
-  filter: alpha(opacity=0);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  opacity: 0;
-}
-/* end Mixins */
 html {
   background: url("../img/bg.png") repeat scroll 0 0 transparent;
 }
-form {
-  margin: 100px auto;
-  width: 320px;
+fieldset {
+  border: 1px solid #333;
+  box-shadow: 0 0 2px #666 inset;
+  margin: 30px 0;
+  padding: 20px;
+}
+legend {
+  background: url("../img/bg.png") repeat scroll 0 0 transparent;
+  border: 1px solid #333;
+  box-shadow: 0 0 2px #666 inset;
+  font-weight: bold;
+  opacity: 0.75;
+  padding: 5px 20px;
+  text-shadow: 1px 1px #666;
 }
 label {
   display: block;
   float: left;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 26px;
   text-indent: 4px;
+}
+p {
+  border: 1px solid #333;
+  box-shadow: 0 0 2px #666 inset;
+  float: left;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 20px auto;
+  padding: 15px 10px;
+  text-align: center;
+  text-shadow: 1px 1px #666;
+}
+::-moz-selection {
+  background: #00607F;
+  color: #ffffff;
+}
+::selection {
+  background: #00607F;
+  color: #ffffff;
+}
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 640px;
+}
+.follow {
+  float: left;
+  margin: 0 0 4%;
+  width: 100%;
+}
+.btn {
+  background-color: #007197;
+  background-image: -moz-linear-gradient(center bottom, #005d7c 0%, #0088b5 100%);
+  background-image: -o-linear-gradient(center bottom, #005d7c 0%, #0088b5 100%);
+  background-image: -webkit-linear-gradient(left bottom, left top, color-stop(0, #005d7c), color-stop(1, #0088b5));
+  background-image: -ms-linear-gradient(top, #005d7c 0%, #0088b5 100%);
+  background-image: linear-gradient(top, #005d7c 0%, #0088b5 100%);
+  border: 1px solid #1D4253;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.55);
+  color: #FFFFFF;
+  display: block;
+  font-size: 1.2em;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #004e68;
+}
+.btn:hover {
+  background-color: #0081ab;
+  background-image: -moz-linear-gradient(center bottom, #00749a 0%, #00a5c6 100%);
+  background-image: -o-linear-gradient(center bottom, #00749a 0%, #00a5c6 100%);
+  background-image: -webkit-linear-gradient(left bottom, left top, color-stop(0, #00749a), color-stop(1, #00a5c6));
+  background-image: -ms-linear-gradient(top, #00749a 0%, #00a5c6 100%);
+  background-image: linear-gradient(top, #00749a 0%, #00a5c6 100%);
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+}
+.btn:active {
+  background-color: #006486;
+  background-image: -moz-linear-gradient(center bottom, #0085a6 0%, #00537a 100%);
+  background-image: -o-linear-gradient(center bottom, #0085a6 0%, #00537a 100%);
+  background-image: -webkit-linear-gradient(left bottom, left top, color-stop(0, #0085a6), color-stop(1, #00537a));
+  background-image: -ms-linear-gradient(top, #0085a6 0%, #00537a 100%);
+  background-image: linear-gradient(top, #0085a6 0%, #00537a 100%);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+.btn span {
+  border-radius: 5px;
+  border-top: 1px solid #00B8D3;
+  display: block;
+  font-weight: bold;
+  padding: 2% 0;
+}
+.btn span:active {
+  border-top-color: transparent;
 }
 .checkboxes input,
 .radios input {
+  border: 0 none;
+  float: left;
+  height: 24px;
   filter: alpha(opacity=0);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   opacity: 0;
-  border: 0 none;
-  float: left;
-  height: 16px;
   position: relative;
-  width: 16px;
+  width: 24px;
 }
 .checkboxes input:focus,
 .radios input:focus,
@@ -42,29 +121,55 @@ label {
 ul li {
   display: block;
   float: left;
-  margin: 5px 0;
+  margin: 10px;
   position: relative;
-  width: 100%;
 }
 ul li span {
-  background: url("../img/icns-forms-elements.png") no-repeat scroll transparent;
+  background: url("../img/checkboxes-and-radio-buttons.png") no-repeat scroll transparent;
   display: block;
-  height: 16px;
+  height: 24px;
   position: absolute;
   left: 0;
   top: 0;
   text-indent: -9999px;
-  width: 16px;
+  width: 24px;
 }
 ul li.checkboxes span {
   background-position: 0 0;
 }
 ul li.checkboxes span.checked {
-  background-position: -16px -16px;
+  background-position: -24px -24px;
+}
+ul li.checkboxes span.checked.focus,
+ul li.checkboxes span.checked.hover {
+  background-position: -96px -96px;
+}
+ul li.checkboxes span.checked.disabled {
+  background-position: -48px -48px;
+}
+ul li.checkboxes span.focus,
+ul li.checkboxes span.hover {
+  background-position: -120px -120px;
+}
+ul li.checkboxes span.disabled {
+  background-position: -72px -72px;
 }
 ul li.radios span {
-  background-position: -32px -32px;
+  background-position: 0 -144px;
 }
 ul li.radios span.radio {
-  background-position: -48px -48px;
+  background-position: -24px -168px;
+}
+ul li.radios span.radio.focus,
+ul li.radios span.radio.hover {
+  background-position: -96px -240px;
+}
+ul li.radios span.radio.disabled {
+  background-position: -48px -192px;
+}
+ul li.radios span.hover {
+  background-position: -120px -264px;
+}
+ul li.radios span.disabled {
+  background-position: -72px -216px;
 }

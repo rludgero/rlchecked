@@ -1,39 +1,128 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
+
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
 	<title>RLChecked Plugin</title>
+
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.7.3/build/cssreset/cssreset-min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script type="text/javascript" src="js/rlchecked.js"></script>
-  <script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/rlchecked.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
 
 </head>
 <body>
-
-	<form>
-		<fieldset>
-			<ul>
-				<li>
-					<input checked="checked" type="checkbox" name="ckbx" />
-					<label for="check">Full</label>
-				</li>
-				<li>
-					<input type="checkbox" name="ckbx" />
-					<label for="check">Empty</label>
-				</li>
-				<li>
-					<input type="radio" name="radio" />
-					<label for="odd">Odd</label>
-				</li>
-				<li>
-					<input checked="checked" type="radio" name="radio" />
-					<label for="even">Even</label>
-				</li>
-			</ul>
-		</fieldset>
-	</form>
-
+	<div class="container">
+		<form>
+			<fieldset>
+				<legend>Checkboxes</legend>
+				<ul>
+					<li>
+						<input checked="checked" type="checkbox" name="ckbx" />
+						<label for="check">Checked</label>
+					</li>
+					<li>
+						<input type="checkbox" name="ckbx" />
+						<label for="check">Unchecked</label>
+					</li>
+					<li>
+						<input checked="checked" disabled="disabled" type="checkbox" name="ckbx" />
+						<label for="check">Disable Checked</label>
+					</li>
+					<li>
+						<input disabled="disabled" type="checkbox" name="ckbx" />
+						<label for="check">Disable Unchecked</label>
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+		<form>
+			<fieldset>
+				<legend>Radio Buttons</legend>
+				<ul>
+					<li>
+						<input checked="checked" type="radio" name="radio" />
+						<label for="odd">Checked</label>
+					</li>
+					<li>
+						<input type="radio" name="radio" />
+						<label for="odd">Unchecked</label>
+					</li>
+					<li>
+						<input type="radio" name="radio" />
+						<label for="odd">Unchecked</label>
+					</li>
+					<li>
+						<input type="radio" name="radio" />
+						<label for="odd">Unchecked</label>
+					</li>
+					<li>
+						<input type="radio" name="radio" />
+						<label for="odd">Unchecked</label>
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+		<form>
+			<fieldset>
+				<legend>Radio Buttons</legend>
+				<ul>
+					<li>
+						<input type="radio" name="radio" />
+						<label for="odd">Unchecked</label>
+					</li>
+					<li>
+						<input type="radio" name="radio" />
+						<label for="odd">Unchecked</label>
+					</li>
+					<li>
+						<input type="radio" name="radio" />
+						<label for="odd">Unchecked</label>
+					</li>
+					<li>
+						<input type="radio" name="radio" />
+						<label for="odd">Unchecked</label>
+					</li>
+					<li>
+						<input type="radio" name="radio" />
+						<label for="odd">Unchecked</label>
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+		<form>
+			<fieldset>
+				<legend>Radio Buttons</legend>
+				<ul>
+					<li>
+						<input disabled="disabled" checked="checked" type="radio" name="radio" />
+						<label for="odd">Disable Checked</label>
+					</li>
+					<li>
+						<input disabled="disabled" type="radio" name="radio" />
+						<label for="odd">Disable Unchecked</label>
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+		<div class="follow">
+			<a class="btn" href="https://twitter.com/#!/rodrigoludgero" title="@rodrigoludgero">
+				<span>
+					<img src="img/twitter-bird.png" alt="cuenta twitter rodrigo ludgero" />
+				</span>
+			</a>
+		</div>
+		<div class="follow">
+			<a class="btn" href="https://github.com/Rodrigo-Ludgero" title="Github Rodrigo-Ludgero">
+				<span>
+					<img src="img/github-octocat.png" alt="cuenta github rodrigo ludgero" />
+				</span>
+			</a>
+		</div>
+		<p>If you want to contribute some design in PSD of checkboxes and radio buttons, send me your design and add it to the plugin by referring to its name.</p>
+	</div>
 </body>
 </html>

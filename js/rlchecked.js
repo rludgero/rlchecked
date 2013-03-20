@@ -1,4 +1,5 @@
 /*
+*
 * Author: Rodrigo Ludgero http://rodrigoludgero.com/
 *
 * Description: A jQuery checkboxes and radio buttons plugin
@@ -7,11 +8,16 @@
 *
 * Project: jQuery rlChecked Plugin https://github.com/Rodrigo-Ludgero
 *
-*
 */
-(function( $ ){
+
+(function($) {
 
 $.fn.rlChecked = function(options) {
+
+	var $this = $(this);
+	var $typeCheck = $("input[type=checkbox]");
+	var $typeRadio = $("input[type=radio]");
+	var $typeInputs = $("input[type=checkbox], input[type=radio]");
 
 	var settings = $.extend({
 		element: "<span>elements</span>", // html tag created to insert through the DOM
@@ -20,33 +26,33 @@ $.fn.rlChecked = function(options) {
 		tag: "li", // html tag parent for checkboxes and radio buttons
 		bg: "span", // reference a settings.element for make use like a variable
 		check: "checked", // sign a class when a checkbox is checked
-		radio: "radio" // sign a class when a radio button is checked
+		radio: "radio", // sign a class when a radio button is checked
+		focus: "focus", // sign a class when accessed with keyboard a checkbox or radio button element
+		disable: "disabled", // sign a class when a checkbox or radio button element have the disabled attribute
+		hover: "hover" // sign a class when hover a checkbox or radio button element
 
 	}, options);
 
 
 	// add element before inputs type
-	$("input[type=checkbox], input[type=radio]").before(settings.element);
+	$typeInputs.before(settings.element);
 
 	return this.each(function() {
-
-		// CHECK BOXES and RADIO BUTTONS
-
 
 		// CHECK BOXES
 
 			// add class to the parent
-			$("input[type=checkbox]").parents(settings.tag).addClass(settings.checkboxes);
+			$typeCheck.parents(settings.tag).addClass(settings.checkboxes);
 
 			// parse if ckeckboxes is checked
-			$("input[type=checkbox]").each(function() {
+			$typeCheck.each(function() {
 				if($(this).is(":checked")) {
 					$(this).siblings(settings.bg).addClass(settings.check);
 				}
 			});
 
 			// change behavior when trigger event
-			$("input[type=checkbox]").change(function() {
+			$typeCheck.change(function() {
 				if($(this).is(":checked")) {
 					$(this).siblings(settings.bg).addClass(settings.check);
 				}
@@ -59,19 +65,19 @@ $.fn.rlChecked = function(options) {
 		// RADIO BUTTONS
 
 			// add class to the parent
-			$("input[type=radio]").parents(settings.tag).addClass(settings.radios);
+			$typeRadio.parents(settings.tag).addClass(settings.radios);
 
 			// parse if radiobuttons is checked
-			$("input[type=radio]").each(function() {
+			$typeRadio.each(function() {
 				if($(this).is(":checked")) {
 					$(this).siblings(settings.bg).addClass(settings.radio);
 				}
 			});
 
 			// change behavior when trigger event
-			$("input[type=radio]").change(function() {
+			$typeRadio.change(function() {
 				if($(this).is(":checked")) {
-					$(this).parents().find(settings.bg).removeClass(settings.radio);
+					$(this).parents("form").find(settings.bg).removeClass(settings.radio);
 					$(this).siblings(settings.bg).addClass(settings.radio);
 				}
 				else {
@@ -79,7 +85,34 @@ $.fn.rlChecked = function(options) {
 				}
 			});
 
+
+		// CHECK BOXES & RADIO BUTTONS
+
+			// add focus class of the checkboxes and radiobuttons
+			$typeInputs.focusin(function() {
+				$(this).siblings(settings.bg).addClass(settings.focus);
+			});
+			// remove focus class of the checkboxes and radiobuttons
+			$typeInputs.focusout(function() {
+				$(this).siblings(settings.bg).removeClass(settings.focus);
+			});
+
+			// add hover class of the checkboxes and radiobuttons
+			$typeInputs.hover(
+				function() {
+					$(this).siblings(settings.bg).addClass(settings.hover);
+				},
+				function() {
+					$(this).siblings(settings.bg).removeClass(settings.hover);
+				}
+			);
+
+			// add class if the element is disabled
+			if($(this).is(":disabled")) {
+				$(this).siblings(settings.bg).addClass(settings.disable);
+			}
+
 	});
 };
 
-})( jQuery );
+})(jQuery);
