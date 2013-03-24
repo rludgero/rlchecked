@@ -2,6 +2,9 @@
 html {
   background: url("../img/bg.png") repeat scroll 0 0 transparent;
 }
+form {
+  clear: right;
+}
 fieldset {
   border: 1px solid #333;
   box-shadow: 0 0 2px #666 inset;
@@ -24,16 +27,27 @@ label {
   line-height: 26px;
   text-indent: 4px;
 }
-p {
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.2em;
+  padding: 0 40px;
+}
+.text {
   border: 1px solid #333;
   box-shadow: 0 0 2px #666 inset;
   float: left;
-  font-size: 13px;
   font-weight: bold;
   margin: 20px auto;
-  padding: 15px 10px;
+  padding: 15px 0;
   text-align: center;
   text-shadow: 1px 1px #666;
+}
+p {
+  font-size: 0.75em;
+  padding: 0 20px;
 }
 ::-moz-selection {
   background: #00607F;

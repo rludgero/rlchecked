@@ -1,3 +1,3 @@
 jQuery(function() {
-	jQuery("input").rlChecked();
+  jQuery("input").rlChecked();
 });
