@@ -2,16 +2,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- inform the browser to set the window width to the device’s width -->
+  <meta charset="UTF-8" /><!-- it is recommended to always use this tag and to specify the charset -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
   <title>RLChecked Plugin</title>
+
+  <meta http-equiv="Content-Language" content="en" />
+
+  <meta name="robots" content="all" />
+
+  <meta name="description" content="jQuery plugin checkbox radio-button rlChecked Rodrigo Ludgero javascript crossbrowser keyboard accessible" />
+
+  <meta name="keywords" content="jQuery plugin, checkbox, radio-button, rlChecked, Rodrigo Ludgero, javascript, crosbrowser, keyboard accessible" />
+
+  <meta name="author" content="Rodrigo Ludgero" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.7.3/build/cssreset/cssreset-min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script rel="dns-prefetch" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
 
   <script type="text/javascript" src="js/rlchecked.js"></script>
@@ -19,84 +32,34 @@
 
 </head>
 <body>
-  <div class="container">
+  <section class="container">
     <div class="text">
-    <h1>rlChecked</h1>
-    <h2>Is a small, clean and efficient plugin cross-browser and keyboard accessible, tested even IE7.</h2>
+      <h1>rlChecked</h1>
+      <h2>jQuery plugin cross-browser and keyboard accessible, tested even IE7.</h2>
     </div>
-    <form action="#" method="post">
+    <form>
       <fieldset>
         <legend>Checkboxes</legend>
         <ul>
           <li>
-            <input id="one" checked="checked" type="checkbox" name="ckbx" />
+            <input id="one" checked="checked" type="checkbox" name="chkbx" />
             <label for="one">Checked</label>
           </li>
           <li>
-            <input id="two" type="checkbox" name="ckbx" />
+            <input id="two" type="checkbox" name="chkbx" />
             <label for="two">Unchecked</label>
           </li>
           <li>
-            <input id="three" checked="checked" disabled="disabled" type="checkbox" name="ckbx" />
+            <input id="three" checked="checked" disabled="disabled" type="checkbox" name="chkbx" />
             <label for="three">Disable Checked</label>
           </li>
           <li>
-            <input id="four" disabled="disabled" type="checkbox" name="ckbx" />
+            <input id="four" disabled="disabled" type="checkbox" name="chkbx" />
             <label for="four">Disable Unchecked</label>
           </li>
         </ul>
       </fieldset>
-    </form>
 
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Checkboxes &amp; Radio Buttons</legend>
-        <ul>
-          <li>
-            <input id="five" checked="checked" type="checkbox" name="ckbx" />
-            <label for="five">Checked</label>
-          </li>
-          <li>
-            <input id="six" type="checkbox" name="ckbx" />
-            <label for="six">Unchecked</label>
-          </li>
-          <li>
-            <input id="seven" type="checkbox" name="ckbx" />
-            <label for="seven">Unchecked</label>
-          </li>
-          <li>
-            <input id="eight" type="checkbox" name="ckbx" />
-            <label for="eight">Unchecked</label>
-          </li>
-          <li>
-            <input id="eight" type="checkbox" name="ckbx" />
-            <label for="eight">Unchecked</label>
-          </li>
-          <li>
-            <input id="nine" checked="checked" type="radio" name="radio" />
-            <label for="nine">Checked</label>
-          </li>
-          <li>
-            <input id="ten" type="radio" name="radio" />
-            <label for="ten">Unchecked</label>
-          </li>
-          <li>
-            <input id="eleven" type="radio" name="radio" />
-            <label for="eleven">Unchecked</label>
-          </li>
-          <li>
-            <input id="twelve" type="radio" name="radio" />
-            <label for="twelve">Unchecked</label>
-          </li>
-          <li>
-            <input id="thirteen" type="radio" name="radio" />
-            <label for="thirteen">Unchecked</label>
-          </li>
-        </ul>
-      </fieldset>
-    </form>
-
-    <form action="#" method="post">
       <fieldset>
         <legend>Radio Buttons</legend>
         <ul>
@@ -113,66 +76,17 @@
             <label for="sixteen">Unchecked</label>
           </li>
           <li>
-            <input id="eighteen" type="radio" name="radio" />
-            <label for="eighteen">Unchecked</label>
+            <input id="eighteen" disabled="disabled" checked="checked" type="radio" name="radio2" />
+            <label for="eighteen">Disable Checked</label>
           </li>
           <li>
-            <input id="nineteen" type="radio" name="radio" />
-            <label for="nineteen">Unchecked</label>
-          </li>
-        </ul>
-      </fieldset>
-    </form>
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Radio Buttons</legend>
-        <ul>
-          <li>
-            <input id="twenty" type="radio" name="radio" />
-            <label for="twenty">Unchecked</label>
-          </li>
-          <li>
-            <input id="twenty-one" type="radio" name="radio" />
-            <label for="twenty-one">Unchecked</label>
-          </li>
-          <li>
-            <input id="twenty-two" type="radio" name="radio" />
-            <label for="twenty-two">Unchecked</label>
-          </li>
-          <li>
-            <input id="twenty-three" type="radio" name="radio" />
-            <label for="twenty-three">Unchecked</label>
-          </li>
-          <li>
-            <input id="twenty-four" type="radio" name="radio" />
-            <label for="twenty-four">Unchecked</label>
-          </li>
-        </ul>
-      </fieldset>
-    </form>
-    <form action="">
-      <fieldset>
-        <legend>Radio Buttons</legend>
-        <ul>
-          <li>
-            <input id="twenty-five" disabled="disabled" checked="checked" type="radio" name="radio" />
-            <label for="twenty-five">Disable Checked</label>
-          </li>
-          <li>
-            <input id="twenty-six" disabled="disabled" type="radio" name="radio" />
-            <label for="twenty-six">Disable Unchecked</label>
+            <input id="nineteen" disabled="disabled" type="radio" name="radio2" />
+            <label for="nineteen">Disable Unchecked</label>
           </li>
         </ul>
       </fieldset>
     </form>
 
-    <div class="follow">
-      <a class="btn" href="https://twitter.com/#!/rodrigoludgero" title="@rodrigoludgero">
-        <span>
-          <img src="img/twitter-bird.png" alt="cuenta twitter rodrigo ludgero" />
-        </span>
-      </a>
-    </div>
 
     <div class="follow">
       <a class="btn" href="https://github.com/Rodrigo-Ludgero" title="Github Rodrigo-Ludgero">
@@ -182,10 +96,6 @@
       </a>
     </div>
 
-    <div class="text">
-      <p>If you want to contribute some design in PSD of checkboxes and radio buttons, send me your design and add it to the plugin by referring to its name.</p>
-    </div>
-
-  </div>
+  </section>
 </body>
 </html>

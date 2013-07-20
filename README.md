@@ -10,79 +10,29 @@ A jQuery checkboxes and radio buttons plugin with keyboard accessibility navigat
 
 <h3>HTML</h3>
 
-    <form action="#" method="post">
+    <form>
       <fieldset>
         <legend>Checkboxes</legend>
         <ul>
           <li>
-            <input id="one" checked="checked" type="checkbox" name="ckbx" />
+            <input id="one" checked="checked" type="checkbox" name="chkbx" />
             <label for="one">Checked</label>
           </li>
           <li>
-            <input id="two" type="checkbox" name="ckbx" />
+            <input id="two" type="checkbox" name="chkbx" />
             <label for="two">Unchecked</label>
           </li>
           <li>
-            <input id="three" checked="checked" disabled="disabled" type="checkbox" name="ckbx" />
+            <input id="three" checked="checked" disabled="disabled" type="checkbox" name="chkbx" />
             <label for="three">Disable Checked</label>
           </li>
           <li>
-            <input id="four" disabled="disabled" type="checkbox" name="ckbx" />
+            <input id="four" disabled="disabled" type="checkbox" name="chkbx" />
             <label for="four">Disable Unchecked</label>
           </li>
         </ul>
       </fieldset>
-    </form>
 
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Checkboxes &amp; Radio Buttons</legend>
-        <ul>
-          <li>
-            <input id="five" checked="checked" type="checkbox" name="ckbx" />
-            <label for="five">Checked</label>
-          </li>
-          <li>
-            <input id="six" type="checkbox" name="ckbx" />
-            <label for="six">Unchecked</label>
-          </li>
-          <li>
-            <input id="seven" type="checkbox" name="ckbx" />
-            <label for="seven">Unchecked</label>
-          </li>
-          <li>
-            <input id="eight" type="checkbox" name="ckbx" />
-            <label for="eight">Unchecked</label>
-          </li>
-          <li>
-            <input id="eight" type="checkbox" name="ckbx" />
-            <label for="eight">Unchecked</label>
-          </li>
-          <li>
-            <input id="nine" checked="checked" type="radio" name="radio" />
-            <label for="nine">Checked</label>
-          </li>
-          <li>
-            <input id="ten" type="radio" name="radio" />
-            <label for="ten">Unchecked</label>
-          </li>
-          <li>
-            <input id="eleven" type="radio" name="radio" />
-            <label for="eleven">Unchecked</label>
-          </li>
-          <li>
-            <input id="twelve" type="radio" name="radio" />
-            <label for="twelve">Unchecked</label>
-          </li>
-          <li>
-            <input id="thirteen" type="radio" name="radio" />
-            <label for="thirteen">Unchecked</label>
-          </li>
-        </ul>
-      </fieldset>
-    </form>
-
-    <form action="#" method="post">
       <fieldset>
         <legend>Radio Buttons</legend>
         <ul>
@@ -99,58 +49,17 @@ A jQuery checkboxes and radio buttons plugin with keyboard accessibility navigat
             <label for="sixteen">Unchecked</label>
           </li>
           <li>
-            <input id="eighteen" type="radio" name="radio" />
-            <label for="eighteen">Unchecked</label>
+            <input id="eighteen" disabled="disabled" checked="checked" type="radio" name="radio2" />
+            <label for="eighteen">Disable Checked</label>
           </li>
           <li>
-            <input id="nineteen" type="radio" name="radio" />
-            <label for="nineteen">Unchecked</label>
+            <input id="nineteen" disabled="disabled" type="radio" name="radio2" />
+            <label for="nineteen">Disable Unchecked</label>
           </li>
         </ul>
       </fieldset>
     </form>
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Radio Buttons</legend>
-        <ul>
-          <li>
-            <input id="twenty" type="radio" name="radio" />
-            <label for="twenty">Unchecked</label>
-          </li>
-          <li>
-            <input id="twenty-one" type="radio" name="radio" />
-            <label for="twenty-one">Unchecked</label>
-          </li>
-          <li>
-            <input id="twenty-two" type="radio" name="radio" />
-            <label for="twenty-two">Unchecked</label>
-          </li>
-          <li>
-            <input id="twenty-three" type="radio" name="radio" />
-            <label for="twenty-three">Unchecked</label>
-          </li>
-          <li>
-            <input id="twenty-four" type="radio" name="radio" />
-            <label for="twenty-four">Unchecked</label>
-          </li>
-        </ul>
-      </fieldset>
-    </form>
-    <form action="">
-      <fieldset>
-        <legend>Radio Buttons</legend>
-        <ul>
-          <li>
-            <input id="twenty-five" disabled="disabled" checked="checked" type="radio" name="radio" />
-            <label for="twenty-five">Disable Checked</label>
-          </li>
-          <li>
-            <input id="twenty-six" disabled="disabled" type="radio" name="radio" />
-            <label for="twenty-six">Disable Unchecked</label>
-          </li>
-        </ul>
-      </fieldset>
-    </form>
+
   <!-- || change for your html structure -->
 
 <h3>JS</h3>
