@@ -28,6 +28,7 @@ $.fn.rlChecked = function(options) {
     radio: "radio", // sign a class when a radio button is checked
     focus: "focus", // sign a class when accessed with keyboard a checkbox or radio button element
     disable: "disabled", // sign a class when a checkbox or radio button element have the disabled attribute
+    disableChecked: "disabled-checked", // sign a class when a radio button element have the disabled and checked attribute
     hover: "hover" // sign a class when hover a checkbox or radio button element
 
   }, options);
@@ -76,7 +77,7 @@ $.fn.rlChecked = function(options) {
       // change behavior when trigger event
       $typeRadio.change(function() {
         if($(this).is(":checked")) {
-          $(this).parents("form").find(settings.bg).removeClass(settings.radio);
+          $(this).parents().find(settings.bg).removeClass(settings.radio);
           $(this).siblings(settings.bg).addClass(settings.radio);
         }
         else {
@@ -87,16 +88,16 @@ $.fn.rlChecked = function(options) {
 
     // CHECK BOXES & RADIO BUTTONS
 
-      // add focus class of the checkboxes and radiobuttons
+      // add focus class of the checkboxes and radio-buttons
       $typeInputs.focusin(function() {
         $(this).siblings(settings.bg).addClass(settings.focus);
       });
-      // remove focus class of the checkboxes and radiobuttons
+      // remove focus class of the checkboxes and radio-buttons
       $typeInputs.focusout(function() {
         $(this).siblings(settings.bg).removeClass(settings.focus);
       });
 
-      // add hover class of the checkboxes and radiobuttons
+      // add hover class of the checkboxes and radio-buttons
       $typeInputs.hover(
         function() {
           $(this).siblings(settings.bg).addClass(settings.hover);
@@ -109,7 +110,11 @@ $.fn.rlChecked = function(options) {
       // add class if the element is disabled
       if($(this).is(":disabled")) {
         $(this).siblings(settings.bg).addClass(settings.disable);
+        if($(this).is(":checked")) {
+          $(this).siblings(settings.bg).addClass(settings.disableChecked);
+        }
       }
+
 
   });
 };

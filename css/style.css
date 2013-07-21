@@ -17,11 +17,9 @@ legend {
   text-shadow: 1px 1px #666;
 }
 label {
-  display: block;
   float: left;
   font-size: 14px;
-  line-height: 26px;
-  text-indent: 4px;
+  margin: 8px 0 0 4px;
 }
 h1 {
   font-size: 3em;
@@ -132,7 +130,6 @@ p {
   outline: 0 none;
 }
 form ul li {
-  display: block;
   float: left;
   margin: 0;
   position: relative;
@@ -178,12 +175,12 @@ form ul li.radios span.radio.focus,
 form ul li.radios span.radio.hover {
   background-position: -96px -240px;
 }
-form ul li.radios span.radio.disabled {
-  background-position: -48px -192px;
-}
 form ul li.radios span.hover {
   background-position: -120px -264px;
 }
 form ul li.radios span.disabled {
   background-position: -72px -216px;
+}
+form ul li.radios span.disabled-checked {
+  background-position: -48px -192px;
 }
