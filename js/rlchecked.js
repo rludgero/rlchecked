@@ -77,7 +77,7 @@ $.fn.rlChecked = function(options) {
       // change behavior when trigger event
       $typeRadio.change(function() {
         if($(this).is(":checked")) {
-          $(this).parents().find(settings.bg).removeClass(settings.radio);
+          $(this).parent().siblings().find(settings.bg).removeClass(settings.radio);
           $(this).siblings(settings.bg).addClass(settings.radio);
         }
         else {
