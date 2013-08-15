@@ -16,11 +16,6 @@ legend {
   padding: 5px 20px;
   text-shadow: 1px 1px #666;
 }
-label {
-  float: left;
-  font-size: 14px;
-  margin: 8px 0 0 4px;
-}
 h1 {
   font-size: 3em;
   padding: 0 0 0 40px;
@@ -63,7 +58,7 @@ p {
   width: 640px;
 }
 .follow {
-  margin: 10px 0;
+  margin: 10px 0 5px;
 }
 .btn {
   background-color: #007197;
@@ -111,76 +106,4 @@ p {
 }
 .btn span:active {
   border-top-color: transparent;
-}
-.checkboxes input,
-.radios input {
-  border: 0 none;
-  float: left;
-  height: 24px;
-  filter: alpha(opacity=0);
-  opacity: 0;
-  position: relative;
-  width: 24px;
-}
-.checkboxes input:focus,
-.radios input:focus,
-.checkboxes input:active,
-.radios input:active {
-  border: 0 none;
-  outline: 0 none;
-}
-form ul li {
-  float: left;
-  margin: 0;
-  position: relative;
-  width: 100%;
-}
-form ul li span {
-  background: url("../img/checkboxes-and-radio-buttons.png") no-repeat scroll transparent;
-  display: block;
-  height: 24px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  text-indent: -9999px;
-  width: 24px;
-}
-form ul li.checkboxes span {
-  background-position: 0 0;
-}
-form ul li.checkboxes span.checked {
-  background-position: -24px -24px;
-}
-form ul li.checkboxes span.checked.focus,
-form ul li.checkboxes span.checked.hover {
-  background-position: -96px -96px;
-}
-form ul li.checkboxes span.checked.disabled {
-  background-position: -48px -48px;
-}
-form ul li.checkboxes span.focus,
-form ul li.checkboxes span.hover {
-  background-position: -120px -120px;
-}
-form ul li.checkboxes span.disabled {
-  background-position: -72px -72px;
-}
-form ul li.radios span {
-  background-position: 0 -144px;
-}
-form ul li.radios span.radio {
-  background-position: -24px -168px;
-}
-form ul li.radios span.radio.focus,
-form ul li.radios span.radio.hover {
-  background-position: -96px -240px;
-}
-form ul li.radios span.hover {
-  background-position: -120px -264px;
-}
-form ul li.radios span.disabled {
-  background-position: -72px -216px;
-}
-form ul li.radios span.disabled-checked {
-  background-position: -48px -192px;
 }

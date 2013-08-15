@@ -22,7 +22,6 @@ $.fn.rlChecked = function(options) {
     element: "<span>elements</span>", // html tag created to insert through the DOM
     checkboxes: "checkboxes", // parent class of checkboxes
     radios: "radios", // parent class of radio buttons
-    tag: "li", // html tag parent for checkboxes and radio buttons
     bg: "span", // reference a settings.element for make use like a variable
     check: "checked", // sign a class when a checkbox is checked
     radio: "radio", // sign a class when a radio button is checked
@@ -42,7 +41,7 @@ $.fn.rlChecked = function(options) {
     // CHECK BOXES
 
       // add class to the parent
-      $typeCheck.parents(settings.tag).addClass(settings.checkboxes);
+      $typeCheck.parent().addClass(settings.checkboxes);
 
       // parse if ckeckboxes is checked
       $typeCheck.each(function() {
@@ -65,7 +64,7 @@ $.fn.rlChecked = function(options) {
     // RADIO BUTTONS
 
       // add class to the parent
-      $typeRadio.parents(settings.tag).addClass(settings.radios);
+      $typeRadio.parent().addClass(settings.radios);
 
       // parse if radiobuttons is checked
       $typeRadio.each(function() {

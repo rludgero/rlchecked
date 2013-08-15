@@ -10,17 +10,23 @@ A jQuery checkboxes and radio buttons plugin with keyboard accessibility navigat
 
 <h3>HTML</h3>
 
+  <!-- with li -->
+
     <form>
       <fieldset>
         <legend>Checkboxes</legend>
         <ul>
           <li>
+            <input id="zero" checked="checked" type="checkbox" name="chkbx" />
+            <label for="zero">Checkbox</label>
+          </li>
+          <li>
             <input id="one" checked="checked" type="checkbox" name="chkbx" />
-            <label for="one">Checked</label>
+            <label for="one">Checkbox</label>
           </li>
           <li>
             <input id="two" type="checkbox" name="chkbx" />
-            <label for="two">Unchecked</label>
+            <label for="two">Checkbox</label>
           </li>
           <li>
             <input id="three" checked="checked" disabled="disabled" type="checkbox" name="chkbx" />
@@ -33,34 +39,34 @@ A jQuery checkboxes and radio buttons plugin with keyboard accessibility navigat
         </ul>
       </fieldset>
 
+  <!-- or div -->
+
       <fieldset>
         <legend>Radio Buttons</legend>
-        <ul>
-          <li>
+          <div>
             <input id="fourteen" checked="checked" type="radio" name="radio" />
-            <label for="fourteen">Checked</label>
-          </li>
-          <li>
+            <label for="fourteen">Radio</label>
+          </div>
+          <div>
             <input id="fifteen" type="radio" name="radio" />
-            <label for="fifteen">Unchecked</label>
-          </li>
-          <li>
+            <label for="fifteen">Radio</label>
+          </div>
+          <div>
             <input id="sixteen" type="radio" name="radio" />
-            <label for="sixteen">Unchecked</label>
-          </li>
-          <li>
+            <label for="sixteen">Radio</label>
+          </div>
+          <div>
             <input id="eighteen" disabled="disabled" checked="checked" type="radio" name="radio2" />
             <label for="eighteen">Disable Checked</label>
-          </li>
-          <li>
+          </div>
+          <div>
             <input id="nineteen" disabled="disabled" type="radio" name="radio2" />
             <label for="nineteen">Disable Unchecked</label>
-          </li>
-        </ul>
+          </div>
       </fieldset>
     </form>
 
-  <!-- || change for your html structure -->
+  <!-- or change for other html tag -->
 
 <h3>JS</h3>
 
@@ -79,7 +85,6 @@ A jQuery checkboxes and radio buttons plugin with keyboard accessibility navigat
           element: "<span>elements</span>", // html tag created to insert through the DOM
           checkboxes: "checkboxes", // parent class of checkboxes
           radios: "radios", // parent class of radio buttons
-          tag: "li", // html tag parent for checkboxes and radio buttons
           bg: "span", // reference a settings.element for make use like a variable
           check: "checked", // sign a class when a checkbox is checked
           radio: "radio", // sign a class when a radio button is checked
