@@ -8,7 +8,7 @@
 		"Keyboard",
 		"Accessibility"
 	],
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"author": {
 		"name": "Rodrigo Ludgero",
 		"email": "rludgero@yahoo.es",
@@ -20,7 +20,7 @@
 			"url": "https://github.com/Rodrigo-Ludgero/rlchecked/blob/master/README.md"
 		}
 	],
-	"homepage": "http://rodrigoludgero.com/rlchecked/rlchecked.html",
+	"homepage": "http://rodrigoludgero.com",
 	"demo": "http://rodrigoludgero.com/rlchecked/rlchecked.html",
 	"dependencies": {
 		"jquery": ">=1.6"
