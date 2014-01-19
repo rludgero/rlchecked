@@ -12,7 +12,7 @@ A jQuery checkboxes and radio buttons plugin with keyboard accessibility navigat
 
 <h3>HTML</h3>
 
-  <!-- with <li> -->
+  <!-- with li -->
 
     <form>
       <fieldset>
@@ -41,7 +41,7 @@ A jQuery checkboxes and radio buttons plugin with keyboard accessibility navigat
         </ul>
       </fieldset>
 
-  <!-- or <div> -->
+  <!-- or div -->
 
       <fieldset>
         <legend>Radio Buttons</legend>
