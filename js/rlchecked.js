@@ -17,17 +17,18 @@ $.fn.rlChecked = function(options) {
   var $typeCheck = $("input[type=checkbox]");
   var $typeRadio = $("input[type=radio]");
   var $typeInputs = $("input[type=checkbox], input[type=radio]");
+  var $labels = $("label");
 
   var settings = $.extend({
-    element: "<span>elements</span>", // html tag created to insert through the DOM
-    checkboxes: "checkboxes", // parent class of checkboxes
-    radios: "radios", // parent class of radio buttons
+    element: "<span></span>", // html tag created to insert through the DOM
+    checkboxes: "rlCheckboxes", // parent class of checkboxes
+    radios: "rlRadios", // parent class of radio buttons
     bg: "span", // reference a settings.element for make use like a variable
     check: "checked", // sign a class when a checkbox is checked
     radio: "radio", // sign a class when a radio button is checked
     focus: "focus", // sign a class when accessed with keyboard a checkbox or radio button element
     disable: "disabled", // sign a class when a checkbox or radio button element have the disabled attribute
-    disableChecked: "disabled-checked", // sign a class when a radio button element have the disabled and checked attribute
+    disableChecked: "disabled-checked", // sign a class when a radio-button and checkbox element have the disabled and checked attribute, this behavior is necessary when have this attributes combination
     hover: "hover" // sign a class when hover a checkbox or radio button element
 
   }, options);
@@ -106,6 +107,16 @@ $.fn.rlChecked = function(options) {
         }
       );
 
+      // add hover class when hover a sibling label of the checkboxes and radio-buttons
+      $labels.hover(
+        function() {
+          $(this).siblings(settings.bg).addClass(settings.hover);
+        },
+        function() {
+          $(this).siblings(settings.bg).removeClass(settings.hover);
+        }
+      );
+
       // add class if the element is disabled
       if($(this).is(":disabled")) {
         $(this).siblings(settings.bg).addClass(settings.disable);
@@ -113,7 +124,6 @@ $.fn.rlChecked = function(options) {
           $(this).siblings(settings.bg).addClass(settings.disableChecked);
         }
       }
-
 
   });
 };

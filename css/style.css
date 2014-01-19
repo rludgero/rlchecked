@@ -1,64 +1,230 @@
 @charset "utf-8";
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+}
 html {
-  background: url("../img/bg.png") repeat scroll 0 0 transparent;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+pre {
+  white-space: pre-wrap;
+}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
 }
 fieldset {
-  border: 1px solid #333;
-  box-shadow: 0 0 2px #666 inset;
-  margin: 10px 0;
-  padding: 20px;
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
 }
 legend {
+  border: 0;
+  padding: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* End of reset ________________________________________________*/
+html {
+  font-family: helvetica, sans-serif;
+  overflow-y: scroll;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
   background: url("../img/bg.png") repeat scroll 0 0 transparent;
-  border: 1px solid #333;
-  box-shadow: 0 0 2px #666 inset;
-  opacity: 0.75;
-  padding: 5px 20px;
-  text-shadow: 1px 1px #666;
+  padding: 10px;
+}
+fieldset {
+  border: none;
+  float: left;
+  margin: 0 0 20px;
+  padding: 0;
+  width: 50%;
+}
+legend {
+  font-size: 1.2em;
+  margin: 12px 0;
+  text-shadow: 1px 1px 1px #666;
 }
 h1 {
   font-size: 3em;
-  padding: 0 0 0 40px;
+  margin: 20px 0;
+  text-align: center;
 }
 h2 {
-  font-size: 1.125em;
-  padding: 0 40px;
+  font-size: 1.5em;
+  text-align: center;
 }
-.text,
+h3 {
+  font-size: 1.125em;
+}
+h1,
+h2,
+h3 {
+  text-shadow: 1px 1px 1px #666;
+}
+ul {
+  list-style: none outside none;
+  margin: 0;
+  padding-left: 0;
+}
 fieldset,
 .follow {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  float: left;
-  width: 100%;
 }
-.text {
-  border: 1px solid #333;
-  box-shadow: 0 0 2px #666 inset;
-  margin: 20px auto;
-  padding: 15px 0;
-  text-shadow: 1px 1px #666;
-}
-p {
-  font-size: 0.75em;
-  padding: 0 20px;
-}
-::-moz-selection {
-  background: #00607F;
-  color: #ffffff;
-}
-::selection {
-  background: #00607F;
-  color: #ffffff;
-}
-.container {
+.wrap {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   margin: 0 auto;
   max-width: 100%;
   width: 640px;
 }
 .follow {
   margin: 10px 0 5px;
+  clear: both;
 }
 .btn {
   background-color: #007197;
@@ -106,4 +272,442 @@ p {
 }
 .btn span:active {
   border-top-color: transparent;
+}
+/*
+*
+* Author: Rodrigo Ludgero http://rodrigoludgero.com/
+*
+* Description: A jQuery checkboxes and radio buttons plugin
+*
+* License: MIT licensed
+*
+* Project: jQuery rlChecked Plugin https://github.com/Rodrigo-Ludgero
+*
+*/
+input[type="checkbox"][disabled],
+input[type="radio"][disabled] {
+  cursor: not-allowed;
+}
+input[type="checkbox"][disabled] + label,
+input[type="radio"][disabled] + label {
+  cursor: not-allowed;
+}
+.img-sprite .rlCheckboxes,
+.img-sprite .rlRadios {
+  float: left;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+.img-sprite .rlCheckboxes span,
+.img-sprite .rlRadios span {
+  background: url("../img/checkboxes-and-radio-buttons.png") no-repeat scroll transparent;
+  display: block;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+}
+.img-sprite .rlCheckboxes input[type="checkbox"],
+.img-sprite .rlRadios input[type="checkbox"],
+.img-sprite .rlCheckboxes input[type="radio"],
+.img-sprite .rlRadios input[type="radio"] {
+  border: 0 none;
+  clear: left;
+  float: left;
+  height: 24px;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  position: relative;
+  width: 24px;
+}
+.img-sprite .rlCheckboxes input[type="checkbox"] + label,
+.img-sprite .rlRadios input[type="checkbox"] + label,
+.img-sprite .rlCheckboxes input[type="radio"] + label,
+.img-sprite .rlRadios input[type="radio"] + label {
+  clear: right;
+  color: #fff;
+  float: left;
+  font-size: .75em;
+  line-height: 2;
+  margin: 0 5px;
+}
+.img-sprite .rlCheckboxes input[type="checkbox"]:focus,
+.img-sprite .rlRadios input[type="checkbox"]:focus,
+.img-sprite .rlCheckboxes input[type="radio"]:focus,
+.img-sprite .rlRadios input[type="radio"]:focus,
+.img-sprite .rlCheckboxes input[type="checkbox"]:active,
+.img-sprite .rlRadios input[type="checkbox"]:active,
+.img-sprite .rlCheckboxes input[type="radio"]:active,
+.img-sprite .rlRadios input[type="radio"]:active {
+  border: 0 none;
+  outline: 0 none;
+}
+.img-sprite .rlCheckboxes span {
+  background-position: 0 0;
+}
+.img-sprite .rlCheckboxes span.checked {
+  background-position: -24px -24px;
+}
+.img-sprite .rlCheckboxes span.checked.focus,
+.img-sprite .rlCheckboxes span.checked.hover {
+  background-position: -96px -96px;
+}
+.img-sprite .rlCheckboxes span.checked.disabled {
+  background-position: -48px -48px;
+}
+.img-sprite .rlCheckboxes span.focus,
+.img-sprite .rlCheckboxes span.hover {
+  background-position: -120px -120px;
+}
+.img-sprite .rlCheckboxes span.disabled {
+  background-position: -72px -72px;
+}
+.img-sprite .rlRadios span {
+  background-position: 0 -144px;
+}
+.img-sprite .rlRadios span.radio {
+  background-position: -24px -168px;
+}
+.img-sprite .rlRadios span.radio.focus,
+.img-sprite .rlRadios span.radio.hover {
+  background-position: -96px -240px;
+}
+.img-sprite .rlRadios span.hover {
+  background-position: -120px -264px;
+}
+.img-sprite .rlRadios span.disabled {
+  background-position: -72px -216px;
+}
+.img-sprite .rlRadios span.disabled.disabled-checked {
+  background-position: -48px -192px;
+}
+/*
+*
+* Author: Rodrigo Ludgero http://rodrigoludgero.com/
+*
+* Description: A jQuery checkboxes and radio buttons plugin
+*
+* License: MIT licensed
+*
+* Project: jQuery rlChecked Plugin https://github.com/Rodrigo-Ludgero
+*
+*/
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../font/font-awesome/fontawesome-webfont.eot?v=3.2.1');
+  src: url('../font/font-awesome/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../font/font-awesome/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('../font/font-awesome/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('../font/font-awesome/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+input[type="checkbox"][disabled],
+input[type="radio"][disabled] {
+  cursor: not-allowed;
+}
+input[type="checkbox"][disabled] + label,
+input[type="radio"][disabled] + label {
+  cursor: not-allowed;
+}
+.font-face-font-awesome {
+  font-family: 'FontAwesome', helvetica, sans-serif;
+}
+.font-face-font-awesome .rlCheckboxes,
+.font-face-font-awesome .rlRadios {
+  float: left;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+.font-face-font-awesome .rlCheckboxes span,
+.font-face-font-awesome .rlRadios span {
+  display: block;
+  float: none;
+  height: 24px;
+  line-height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+}
+.font-face-font-awesome .rlCheckboxes span:before,
+.font-face-font-awesome .rlRadios span:before {
+  font-size: 24px;
+  height: 24px;
+  position: absolute;
+  text-align: center;
+  width: 24px;
+}
+.font-face-font-awesome .rlCheckboxes input[type="checkbox"],
+.font-face-font-awesome .rlRadios input[type="checkbox"],
+.font-face-font-awesome .rlCheckboxes input[type="radio"],
+.font-face-font-awesome .rlRadios input[type="radio"] {
+  border: 0 none;
+  clear: left;
+  float: left;
+  height: 24px;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  position: relative;
+  width: 24px;
+}
+.font-face-font-awesome .rlCheckboxes input[type="checkbox"] + label,
+.font-face-font-awesome .rlRadios input[type="checkbox"] + label,
+.font-face-font-awesome .rlCheckboxes input[type="radio"] + label,
+.font-face-font-awesome .rlRadios input[type="radio"] + label {
+  clear: right;
+  color: #fff;
+  float: left;
+  font-size: .75em;
+  line-height: 2;
+  margin: 0 5px;
+}
+.font-face-font-awesome .rlCheckboxes input[type="checkbox"]:focus,
+.font-face-font-awesome .rlRadios input[type="checkbox"]:focus,
+.font-face-font-awesome .rlCheckboxes input[type="radio"]:focus,
+.font-face-font-awesome .rlRadios input[type="radio"]:focus,
+.font-face-font-awesome .rlCheckboxes input[type="checkbox"]:active,
+.font-face-font-awesome .rlRadios input[type="checkbox"]:active,
+.font-face-font-awesome .rlCheckboxes input[type="radio"]:active,
+.font-face-font-awesome .rlRadios input[type="radio"]:active {
+  border: 0 none;
+  outline: 0 none;
+}
+.font-face-font-awesome .rlCheckboxes span {
+  background: none;
+}
+.font-face-font-awesome .rlCheckboxes span:before {
+  color: #000;
+  content: "\f096";
+}
+.font-face-font-awesome .rlCheckboxes span.checked {
+  background: none;
+}
+.font-face-font-awesome .rlCheckboxes span.checked:before {
+  color: #000;
+  content: "\f14a";
+}
+.font-face-font-awesome .rlCheckboxes span.checked.focus:before,
+.font-face-font-awesome .rlCheckboxes span.checked.hover:before {
+  color: #fff;
+}
+.font-face-font-awesome .rlCheckboxes span.checked.focus.disabled-checked:before,
+.font-face-font-awesome .rlCheckboxes span.checked.hover.disabled-checked:before {
+  color: #ccc;
+}
+.font-face-font-awesome .rlCheckboxes span.disabled-checked:before {
+  color: #ccc;
+  content: "\f14a";
+}
+.font-face-font-awesome .rlCheckboxes span.focus:before,
+.font-face-font-awesome .rlCheckboxes span.hover:before {
+  color: #fff;
+}
+.font-face-font-awesome .rlCheckboxes span.focus.disabled:before,
+.font-face-font-awesome .rlCheckboxes span.hover.disabled:before {
+  color: #ccc;
+}
+.font-face-font-awesome .rlCheckboxes span.disabled:before {
+  color: #ccc;
+}
+.font-face-font-awesome .rlRadios span {
+  background: none;
+}
+.font-face-font-awesome .rlRadios span:before {
+  color: #000;
+  content: "\f10c";
+}
+.font-face-font-awesome .rlRadios span.radio:before {
+  color: #000;
+  content: "\f058";
+}
+.font-face-font-awesome .rlRadios span.radio.focus:before,
+.font-face-font-awesome .rlRadios span.radio.hover:before {
+  color: #fff;
+}
+.font-face-font-awesome .rlRadios span.radio.focus.disabled-checked:before,
+.font-face-font-awesome .rlRadios span.radio.hover.disabled-checked:before {
+  color: #ccc;
+}
+.font-face-font-awesome .rlRadios span.disabled-checked:before {
+  color: #ccc;
+  content: "\f058";
+}
+.font-face-font-awesome .rlRadios span.focus:before,
+.font-face-font-awesome .rlRadios span.hover:before {
+  color: #fff;
+}
+.font-face-font-awesome .rlRadios span.focus.disabled:before,
+.font-face-font-awesome .rlRadios span.hover.disabled:before {
+  color: #ccc;
+}
+.font-face-font-awesome .rlRadios span.disabled:before {
+  color: #ccc;
+}
+/*
+*
+* Author: Rodrigo Ludgero http://rodrigoludgero.com/
+*
+* Description: A jQuery checkboxes and radio buttons plugin
+*
+* License: MIT licensed
+*
+* Project: jQuery rlChecked Plugin https://github.com/Rodrigo-Ludgero
+*
+*/
+@font-face {
+  font-family: 'Ionicons';
+  src: url("../font/ionicons/ionicons.eot?v=1.3.5");
+  src: url("../font/ionicons/ionicons.eot?v=1.3.5#iefix") format("embedded-opentype"), url("../font/ionicons/ionicons.ttf?v=1.3.5") format("truetype"), url("../font/ionicons/ionicons.woff?v=1.3.5") format("woff"), url("../font/ionicons/ionicons.svg?v=1.3.5#Ionicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+input[type="checkbox"][disabled],
+input[type="radio"][disabled] {
+  cursor: not-allowed;
+}
+input[type="checkbox"][disabled] + label,
+input[type="radio"][disabled] + label {
+  cursor: not-allowed;
+}
+.font-face-ionicons {
+  font-family: 'Ionicons', helvetica, sans-serif;
+}
+.font-face-ionicons .rlCheckboxes,
+.font-face-ionicons .rlRadios {
+  float: left;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+.font-face-ionicons .rlCheckboxes span,
+.font-face-ionicons .rlRadios span {
+  display: block;
+  float: none;
+  height: 24px;
+  line-height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+}
+.font-face-ionicons .rlCheckboxes span:before,
+.font-face-ionicons .rlRadios span:before {
+  font-size: 24px;
+  height: 24px;
+  position: absolute;
+  text-align: center;
+  width: 24px;
+}
+.font-face-ionicons .rlCheckboxes input[type="checkbox"],
+.font-face-ionicons .rlRadios input[type="checkbox"],
+.font-face-ionicons .rlCheckboxes input[type="radio"],
+.font-face-ionicons .rlRadios input[type="radio"] {
+  border: 0 none;
+  clear: left;
+  float: left;
+  height: 24px;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  position: relative;
+  width: 24px;
+}
+.font-face-ionicons .rlCheckboxes input[type="checkbox"] + label,
+.font-face-ionicons .rlRadios input[type="checkbox"] + label,
+.font-face-ionicons .rlCheckboxes input[type="radio"] + label,
+.font-face-ionicons .rlRadios input[type="radio"] + label {
+  clear: right;
+  color: #fff;
+  float: left;
+  font-size: .75em;
+  line-height: 2;
+  margin: 0 5px;
+}
+.font-face-ionicons .rlCheckboxes input[type="checkbox"]:focus,
+.font-face-ionicons .rlRadios input[type="checkbox"]:focus,
+.font-face-ionicons .rlCheckboxes input[type="radio"]:focus,
+.font-face-ionicons .rlRadios input[type="radio"]:focus,
+.font-face-ionicons .rlCheckboxes input[type="checkbox"]:active,
+.font-face-ionicons .rlRadios input[type="checkbox"]:active,
+.font-face-ionicons .rlCheckboxes input[type="radio"]:active,
+.font-face-ionicons .rlRadios input[type="radio"]:active {
+  border: 0 none;
+  outline: 0 none;
+}
+.font-face-ionicons .rlCheckboxes span {
+  background: none;
+}
+.font-face-ionicons .rlCheckboxes span:before {
+  color: #000;
+  content: "\f170";
+}
+.font-face-ionicons .rlCheckboxes span.checked {
+  background: none;
+}
+.font-face-ionicons .rlCheckboxes span.checked:before {
+  color: #000;
+  content: "\f16d";
+}
+.font-face-ionicons .rlCheckboxes span.checked.focus:before,
+.font-face-ionicons .rlCheckboxes span.checked.hover:before {
+  color: #fff;
+}
+.font-face-ionicons .rlCheckboxes span.checked.focus.disabled-checked:before,
+.font-face-ionicons .rlCheckboxes span.checked.hover.disabled-checked:before {
+  color: #ccc;
+}
+.font-face-ionicons .rlCheckboxes span.disabled-checked:before {
+  color: #ccc;
+  content: "\f16d";
+}
+.font-face-ionicons .rlCheckboxes span.focus:before,
+.font-face-ionicons .rlCheckboxes span.hover:before {
+  color: #fff;
+}
+.font-face-ionicons .rlCheckboxes span.focus.disabled:before,
+.font-face-ionicons .rlCheckboxes span.hover.disabled:before {
+  color: #ccc;
+}
+.font-face-ionicons .rlCheckboxes span.disabled:before {
+  color: #ccc;
+}
+.font-face-ionicons .rlRadios span {
+  background: none;
+}
+.font-face-ionicons .rlRadios span:before {
+  color: #000;
+  content: "\f170";
+}
+.font-face-ionicons .rlRadios span.radio:before {
+  color: #000;
+  content: "\f16f";
+}
+.font-face-ionicons .rlRadios span.radio.focus:before,
+.font-face-ionicons .rlRadios span.radio.hover:before {
+  color: #fff;
+}
+.font-face-ionicons .rlRadios span.radio.focus.disabled-checked:before,
+.font-face-ionicons .rlRadios span.radio.hover.disabled-checked:before {
+  color: #ccc;
+}
+.font-face-ionicons .rlRadios span.disabled-checked:before {
+  color: #ccc;
+  content: "\f16f";
+}
+.font-face-ionicons .rlRadios span.focus:before,
+.font-face-ionicons .rlRadios span.hover:before {
+  color: #fff;
+}
+.font-face-ionicons .rlRadios span.focus.disabled:before,
+.font-face-ionicons .rlRadios span.hover.disabled:before {
+  color: #ccc;
+}
+.font-face-ionicons .rlRadios span.disabled:before {
+  color: #ccc;
+}
+/* Mobile (Portrait) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  fieldset {
+    width: 100%;
+  }
 }

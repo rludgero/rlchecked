@@ -1,3 +1,6 @@
 jQuery(function() {
-  jQuery("input").rlChecked();
+
+  jQuery(".font-face-font-awesome input, .font-face-ionicons input, .img-sprite input").rlChecked();
+
 });
+

@@ -1,0 +1,161 @@
+/*
+*
+* Author: Rodrigo Ludgero http://rodrigoludgero.com/
+*
+* Description: A jQuery checkboxes and radio buttons plugin
+*
+* License: MIT licensed
+*
+* Project: jQuery rlChecked Plugin https://github.com/Rodrigo-Ludgero
+*
+*/
+@font-face {
+  font-family: 'Ionicons';
+  src: url("../font/ionicons/ionicons.eot?v=1.3.5");
+  src: url("../font/ionicons/ionicons.eot?v=1.3.5#iefix") format("embedded-opentype"), url("../font/ionicons/ionicons.ttf?v=1.3.5") format("truetype"), url("../font/ionicons/ionicons.woff?v=1.3.5") format("woff"), url("../font/ionicons/ionicons.svg?v=1.3.5#Ionicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+input[type="checkbox"][disabled],
+input[type="radio"][disabled] {
+  cursor: not-allowed;
+}
+input[type="checkbox"][disabled] + label,
+input[type="radio"][disabled] + label {
+  cursor: not-allowed;
+}
+.font-face-ionicons {
+  font-family: 'Ionicons', helvetica, sans-serif;
+}
+.font-face-ionicons .rlCheckboxes,
+.font-face-ionicons .rlRadios {
+  float: left;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+.font-face-ionicons .rlCheckboxes span,
+.font-face-ionicons .rlRadios span {
+  display: block;
+  float: none;
+  height: 24px;
+  line-height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+}
+.font-face-ionicons .rlCheckboxes span:before,
+.font-face-ionicons .rlRadios span:before {
+  font-size: 24px;
+  height: 24px;
+  position: absolute;
+  text-align: center;
+  width: 24px;
+}
+.font-face-ionicons .rlCheckboxes input[type="checkbox"],
+.font-face-ionicons .rlRadios input[type="checkbox"],
+.font-face-ionicons .rlCheckboxes input[type="radio"],
+.font-face-ionicons .rlRadios input[type="radio"] {
+  border: 0 none;
+  clear: left;
+  float: left;
+  height: 24px;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  position: relative;
+  width: 24px;
+}
+.font-face-ionicons .rlCheckboxes input[type="checkbox"] + label,
+.font-face-ionicons .rlRadios input[type="checkbox"] + label,
+.font-face-ionicons .rlCheckboxes input[type="radio"] + label,
+.font-face-ionicons .rlRadios input[type="radio"] + label {
+  clear: right;
+  color: #fff;
+  float: left;
+  font-size: .75em;
+  line-height: 2;
+  margin: 0 5px;
+}
+.font-face-ionicons .rlCheckboxes input[type="checkbox"]:focus,
+.font-face-ionicons .rlRadios input[type="checkbox"]:focus,
+.font-face-ionicons .rlCheckboxes input[type="radio"]:focus,
+.font-face-ionicons .rlRadios input[type="radio"]:focus,
+.font-face-ionicons .rlCheckboxes input[type="checkbox"]:active,
+.font-face-ionicons .rlRadios input[type="checkbox"]:active,
+.font-face-ionicons .rlCheckboxes input[type="radio"]:active,
+.font-face-ionicons .rlRadios input[type="radio"]:active {
+  border: 0 none;
+  outline: 0 none;
+}
+.font-face-ionicons .rlCheckboxes span {
+  background: none;
+}
+.font-face-ionicons .rlCheckboxes span:before {
+  color: #000;
+  content: "\f170";
+}
+.font-face-ionicons .rlCheckboxes span.checked {
+  background: none;
+}
+.font-face-ionicons .rlCheckboxes span.checked:before {
+  color: #000;
+  content: "\f16d";
+}
+.font-face-ionicons .rlCheckboxes span.checked.focus:before,
+.font-face-ionicons .rlCheckboxes span.checked.hover:before {
+  color: #fff;
+}
+.font-face-ionicons .rlCheckboxes span.checked.focus.disabled-checked:before,
+.font-face-ionicons .rlCheckboxes span.checked.hover.disabled-checked:before {
+  color: #ccc;
+}
+.font-face-ionicons .rlCheckboxes span.disabled-checked:before {
+  color: #ccc;
+  content: "\f16d";
+}
+.font-face-ionicons .rlCheckboxes span.focus:before,
+.font-face-ionicons .rlCheckboxes span.hover:before {
+  color: #fff;
+}
+.font-face-ionicons .rlCheckboxes span.focus.disabled:before,
+.font-face-ionicons .rlCheckboxes span.hover.disabled:before {
+  color: #ccc;
+}
+.font-face-ionicons .rlCheckboxes span.disabled:before {
+  color: #ccc;
+}
+.font-face-ionicons .rlRadios span {
+  background: none;
+}
+.font-face-ionicons .rlRadios span:before {
+  color: #000;
+  content: "\f170";
+}
+.font-face-ionicons .rlRadios span.radio:before {
+  color: #000;
+  content: "\f16f";
+}
+.font-face-ionicons .rlRadios span.radio.focus:before,
+.font-face-ionicons .rlRadios span.radio.hover:before {
+  color: #fff;
+}
+.font-face-ionicons .rlRadios span.radio.focus.disabled-checked:before,
+.font-face-ionicons .rlRadios span.radio.hover.disabled-checked:before {
+  color: #ccc;
+}
+.font-face-ionicons .rlRadios span.disabled-checked:before {
+  color: #ccc;
+  content: "\f16f";
+}
+.font-face-ionicons .rlRadios span.focus:before,
+.font-face-ionicons .rlRadios span.hover:before {
+  color: #fff;
+}
+.font-face-ionicons .rlRadios span.focus.disabled:before,
+.font-face-ionicons .rlRadios span.hover.disabled:before {
+  color: #ccc;
+}
+.font-face-ionicons .rlRadios span.disabled:before {
+  color: #ccc;
+}

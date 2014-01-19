@@ -20,77 +20,188 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.7.3/build/cssreset/cssreset-min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+<!-- <link rel="stylesheet" type="text/css" href="css/font-awesome/font-awesome.min.css" media="all" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="css/ionicons/ionicons.min.min.css" media="all" /> -->
 
-  <link rel="stylesheet" type="text/css" href="css/rlchecked.css" media="all" />
-
-
-  <script rel="dns-prefetch" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
-
-  <script type="text/javascript" src="js/rlchecked.js"></script>
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/html5shiv.js"></script>
+  <script type="text/javascript" src="js/rlchecked.min.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
 
 </head>
 <body>
-  <section class="container">
-    <div class="text">
+
+  <header class="wrap">
       <h1>rlChecked</h1>
-      <h2>jQuery plugin cross-browser and keyboard accessible, tested even IE7.</h2>
-    </div>
+      <h2>jQuery plugin cross-browser and keyboard accessible.</h2>
+  </header>
+
+  <main class="wrap">
     <form>
-      <fieldset>
+
+      <h3>Make with @font-face Font Awesome</h3>
+
+      <fieldset class="font-face-font-awesome">
         <legend>Checkboxes</legend>
         <ul>
           <li>
-            <input id="zero" checked="checked" type="checkbox" name="chkbx" />
+            <input id="zero" type="checkbox" name="chkbx1" />
             <label for="zero">Checkbox</label>
           </li>
           <li>
-            <input id="one" checked="checked" type="checkbox" name="chkbx" />
+            <input id="one" type="checkbox" name="chkbx1" />
             <label for="one">Checkbox</label>
           </li>
           <li>
-            <input id="two" type="checkbox" name="chkbx" />
+            <input id="two" type="checkbox" name="chkbx1" />
             <label for="two">Checkbox</label>
           </li>
           <li>
-            <input id="three" checked="checked" disabled="disabled" type="checkbox" name="chkbx" />
+            <input id="three" checked="checked" disabled="disabled" type="checkbox" name="chkbx1" />
             <label for="three">Disable Checked</label>
           </li>
           <li>
-            <input id="four" disabled="disabled" type="checkbox" name="chkbx" />
+            <input id="four" disabled="disabled" type="checkbox" name="chkbx1" />
             <label for="four">Disable Unchecked</label>
           </li>
         </ul>
       </fieldset>
 
-      <fieldset>
+      <fieldset class="font-face-font-awesome">
         <legend>Radio Buttons</legend>
           <div>
-            <input id="fourteen" checked="checked" type="radio" name="radio" />
-            <label for="fourteen">Radio</label>
+            <input id="five" type="radio" name="radio1" />
+            <label for="five">Radio</label>
           </div>
           <div>
-            <input id="fifteen" type="radio" name="radio" />
+            <input id="six" type="radio" name="radio1" />
+            <label for="six">Radio</label>
+          </div>
+          <div>
+            <input id="seven" type="radio" name="radio1" />
+            <label for="seven">Radio</label>
+          </div>
+          <div>
+            <input id="eight" checked="checked" disabled="disabled" type="radio" name="radios1" />
+            <label for="eight">Disable Checked</label>
+          </div>
+          <div>
+            <input id="nine" disabled="disabled" type="radio" name="radios1" />
+            <label for="nine">Disable Unchecked</label>
+          </div>
+      </fieldset>
+
+
+      <h3>Make with @font-face Ionicons</h3>
+
+      <fieldset class="font-face-ionicons">
+        <legend>Checkboxes</legend>
+        <ul>
+          <li>
+            <input id="ten" type="checkbox" name="chkbx2" />
+            <label for="ten">Checkbox</label>
+          </li>
+          <li>
+            <input id="eleven" type="checkbox" name="chkbx2" />
+            <label for="eleven">Checkbox</label>
+          </li>
+          <li>
+            <input id="twelve" type="checkbox" name="chkbx2" />
+            <label for="twelve">Checkbox</label>
+          </li>
+          <li>
+            <input id="thirteen" checked="checked" disabled="disabled" type="checkbox" name="chkbx2" />
+            <label for="thirteen">Disable Checked</label>
+          </li>
+          <li>
+            <input id="fourteen" disabled="disabled" type="checkbox" name="chkbx2" />
+            <label for="fourteen">Disable Unchecked</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="font-face-ionicons">
+        <legend>Radio Buttons</legend>
+          <div>
+            <input id="fifteen" type="radio" name="radio2" />
             <label for="fifteen">Radio</label>
           </div>
           <div>
-            <input id="sixteen" type="radio" name="radio" />
+            <input id="sixteen" type="radio" name="radio2" />
             <label for="sixteen">Radio</label>
           </div>
           <div>
-            <input id="eighteen" disabled="disabled" checked="checked" type="radio" name="radio2" />
+            <input id="seventeen" type="radio" name="radio2" />
+            <label for="seventeen">Radio</label>
+          </div>
+          <div>
+            <input id="eighteen" checked="checked" disabled="disabled" type="radio" name="radios2" />
             <label for="eighteen">Disable Checked</label>
           </div>
           <div>
-            <input id="nineteen" disabled="disabled" type="radio" name="radio2" />
+            <input id="nineteen" disabled="disabled" type="radio" name="radios2" />
             <label for="nineteen">Disable Unchecked</label>
           </div>
       </fieldset>
+
+
+      <h3>Make with Sprite Images</h3>
+
+      <fieldset class="img-sprite">
+        <legend>Checkboxes</legend>
+        <ul>
+          <li>
+            <input id="twenty" type="checkbox" name="chkbx3" />
+            <label for="twenty">Checkbox</label>
+          </li>
+          <li>
+            <input id="twenty-one" type="checkbox" name="chkbx3" />
+            <label for="twenty-one">Checkbox</label>
+          </li>
+          <li>
+            <input id="twenty-two" type="checkbox" name="chkbx3" />
+            <label for="twenty-two">Checkbox</label>
+          </li>
+          <li>
+            <input id="twenty-three" checked="checked" disabled="disabled" type="checkbox" name="chkbx3" />
+            <label for="twenty-three">Disable Checked</label>
+          </li>
+          <li>
+            <input id="twenty-four" disabled="disabled" type="checkbox" name="chkbx3" />
+            <label for="twenty-four">Disable Unchecked</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="img-sprite">
+        <legend>Radio Buttons</legend>
+          <div>
+            <input id="twenty-five" type="radio" name="radio3" />
+            <label for="twenty-five">Radio</label>
+          </div>
+          <div>
+            <input id="twenty-six" type="radio" name="radio3" />
+            <label for="twenty-six">Radio</label>
+          </div>
+          <div>
+            <input id="twenty-seven" type="radio" name="radio3" />
+            <label for="twenty-seven">Radio</label>
+          </div>
+          <div>
+            <input id="twenty-eight" checked="checked" disabled="disabled" type="radio" name="radios3" />
+            <label for="twenty-eight">Disable Checked</label>
+          </div>
+          <div>
+            <input id="twenty-nine" disabled="disabled" type="radio" name="radios3" />
+            <label for="twenty-nine">Disable Unchecked</label>
+          </div>
+      </fieldset>
+
     </form>
 
+  </main>
+  <footer class="wrap">
     <div class="follow">
       <a class="btn" href="https://github.com/Rodrigo-Ludgero" title="Github Rodrigo-Ludgero">
         <span>
@@ -98,7 +209,6 @@
         </span>
       </a>
     </div>
-
-  </section>
+  </footer>
 </body>
 </html>

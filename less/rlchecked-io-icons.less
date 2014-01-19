@@ -1,0 +1,192 @@
+/*
+*
+* Author: Rodrigo Ludgero http://rodrigoludgero.com/
+*
+* Description: A jQuery checkboxes and radio buttons plugin
+*
+* License: MIT licensed
+*
+* Project: jQuery rlChecked Plugin https://github.com/Rodrigo-Ludgero
+*
+*/
+
+
+@font-face {
+	font-family: 'Ionicons';
+	src:  url("../font/ionicons/ionicons.eot?v=1.3.5");
+	src:  url("../font/ionicons/ionicons.eot?v=1.3.5#iefix") format("embedded-opentype"),
+				url("../font/ionicons/ionicons.ttf?v=1.3.5") format("truetype"),
+				url("../font/ionicons/ionicons.woff?v=1.3.5") format("woff"),
+				url("../font/ionicons/ionicons.svg?v=1.3.5#Ionicons") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+input[type="checkbox"][disabled],
+input[type="radio"][disabled] {
+	cursor: not-allowed;
+	+ label {
+		cursor: not-allowed;
+	}
+}
+
+
+// @Font-face icons code
+
+.font-face-ionicons {
+	font-family: 'Ionicons', helvetica, sans-serif;
+	.rlCheckboxes,
+	.rlRadios {
+		float: left;
+		margin: 0;
+		position: relative;
+		width: 100%; // comment this line if you want display inline sequence elements
+		span {
+			display: block;
+			float: none;
+			height: 24px;
+			line-height: 20px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 24px;
+			&:before {
+				font-size: 24px;
+				height: 24px;
+				position: absolute;
+				text-align: center;
+				width: 24px;
+			}
+		}
+
+		input[type="checkbox"],
+		input[type="radio"] {
+			border: 0 none;
+			clear: left;
+			float: left;
+			height: 24px;
+			filter: alpha(opacity=0);
+			opacity: 0;
+			position: relative;
+			width: 24px;
+			+ label {
+				clear: right;
+				color: #fff;
+				float: left;
+				font-size: .75em;
+				line-height: 2;
+				margin: 0 5px;
+			}
+			&:focus,
+			&:active {
+				border: 0 none;
+				outline: 0 none;
+			}
+		}
+	}
+
+	.rlCheckboxes {
+		span {
+			background: none;
+			&:before {
+				color: #000; // default unchecked color
+				content: "\f170"; // unchecked
+			}
+			&.checked {
+				background: none;
+				&:before {
+					color: #000; // default checked color
+					content: "\f16d"; // checked
+				}
+				&.focus,
+				&.hover {
+					&:before {
+						color: #fff; // hover & focus color
+					}
+					&.disabled-checked {
+						&:before {
+							color: #ccc; // disable hover & focus color
+						}
+					}
+				}
+			}
+			&.disabled-checked {
+				&:before {
+					color: #ccc; // disable checked color
+					content: "\f16d"; // checked
+				}
+			}
+
+			&.focus,
+			&.hover {
+				&:before {
+					color: #fff; // hover & focus color
+				}
+				&.disabled {
+					&:before {
+						color: #ccc; // disable unchecked color
+					}
+				}
+			}
+			&.disabled {
+				&:before {
+					color: #ccc; // disable unchecked color
+				}
+			}
+		}
+	}
+
+	.rlRadios {
+		span {
+			background: none;
+			&:before {
+				color: #000; // default unchecked color
+				content: "\f170"; // unchecked
+			}
+			&.radio {
+				&:before {
+					color: #000; // default checked color
+					content: "\f16f"; // checked
+				}
+				&.focus,
+				&.hover {
+					&:before {
+						color: #fff; // hover & focus color
+					}
+					&.disabled-checked {
+						&:before {
+							color: #ccc; // checked hover & focus disable color
+						}
+					}
+				}
+			}
+			&.disabled-checked {
+				&:before {
+					color: #ccc; // checked disable color
+					content: "\f16f"; // checked
+				}
+			}
+
+			&.focus,
+			&.hover {
+				&:before {
+					color: #fff; // unchecked hover & focus color
+				}
+				&.disabled {
+					&:before {
+						color: #ccc; // unchecked hover & focus disable color
+					}
+				}
+			}
+			&.disabled {
+				&:before {
+					color: #ccc; // unchecked disable color
+				}
+			}
+		}
+	}
+}
+
+
+// end checkbox and radio buttons styles

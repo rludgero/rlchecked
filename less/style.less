@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+@import url('normalize.less');
+
+html {
+	font-family: helvetica, sans-serif;
+	overflow-y: scroll; //avoid jumping in firefox when displaying the scroll
+	-webkit-tap-highlight-color: transparent; // avoid background color when we make a tap in Ipad & Iphone
+}
+
+body {
+	background: url("../img/bg.png") repeat scroll 0 0 transparent;
+	padding: 10px;
+}
+
+fieldset {
+	border: none;
+	float: left;
+	margin: 0 0 20px;
+	padding: 0;
+	width: 50%;
+}
+
+legend {
+	font-size: 1.2em;
+	margin: 12px 0;
+	text-shadow: 1px 1px 1px #666;
+}
+
+h1 {
+	font-size: 3em;
+	margin: 20px 0;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+h3 {
+	font-size: 1.125em;
+}
+
+h1, h2, h3 {
+	text-shadow: 1px 1px 1px #666;
+}
+
+ul {
+	list-style: none outside none;
+	margin: 0;
+	padding-left: 0;
+}
+
+fieldset,
+.follow {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.wrap {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 100%;
+	width: 640px;
+}
+
+.follow {
+	margin: 10px 0 5px;
+	clear: both;
+}
+
+.btn {
+	background-color: #007197;
+	background-image: -moz-linear-gradient( center bottom, rgb(0,93,124) 0%, rgb(0,136,181) 100%);
+	background-image: -o-linear-gradient( center bottom, rgb(0,93,124) 0%, rgb(0,136,181) 100%);
+	background-image: -webkit-linear-gradient( left bottom, left top, color-stop(0,rgb(0,93,124)), color-stop(1, rgb(0,136,181)));
+	background-image: -ms-linear-gradient(top, rgb(0,93,124) 0%,rgb(0,136,181) 100%);
+	background-image: linear-gradient(top, rgb(0,93,124) 0%,rgb(0,136,181) 100%);
+	border: 1px solid #1D4253;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.55);
+	color: #FFFFFF;
+	display: block;
+	font-size: 1.2em;
+	margin: 0 auto;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 1px 1px 0 #004e68;
+}
+
+.btn:hover {
+	background-color: #0081ab;
+	background-image: -moz-linear-gradient( center bottom, rgb(0,116,154) 0%, rgb(0,165,198) 100%);
+	background-image: -o-linear-gradient( center bottom, rgb(0,116,154) 0%, rgb(0,165,198) 100%);
+	background-image: -webkit-linear-gradient(left bottom, left top, color-stop(0, rgb(0,116,154)), color-stop(1, rgb(0,165,198)));
+	background-image: -ms-linear-gradient(top, rgb(0,116,154) 0%,rgb(0,165,198) 100%);
+	background-image: linear-gradient(top, rgb(0,116,154) 0%,rgb(0,165,198) 100%);
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+.btn:active {
+	background-color: #006486;
+	background-image: -moz-linear-gradient( center bottom, rgb(0,133,166) 0%, rgb(0,83,122) 100%);
+	background-image: -o-linear-gradient( center bottom, rgb(0,133,166) 0%, rgb(0,83,122) 100%);
+	background-image: -webkit-linear-gradient(left bottom, left top, color-stop(0, rgb(0,133,166)), color-stop(1, rgb(0,83,122)));
+	background-image: -ms-linear-gradient(top, rgb(0,133,166) 0%,rgb(0,83,122) 100%);
+	background-image: linear-gradient(top, rgb(0,133,166) 0%,rgb(0,83,122) 100%);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+.btn span {
+	border-radius: 5px;
+	border-top: 1px solid #00B8D3;
+	display: block;
+	font-weight: bold;
+	padding: 2% 0;
+}
+
+.btn span:active {
+	border-top-color: transparent;
+}
+
+
+// radio-buttons and checkboxes styles
+
+@import url('rlchecked-sprite-icons.less');
+
+@import url('rlchecked-fa-icons.less');
+
+@import url('rlchecked-io-icons.less');
+
+
+
+/* Mobile (Portrait) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+	fieldset {
+		width: 100%;
+	}
+}
+
+
+
