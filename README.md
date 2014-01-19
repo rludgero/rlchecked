@@ -5,12 +5,14 @@ A jQuery checkboxes and radio buttons plugin with keyboard accessibility navigat
 
 <h2>About</h2>
 <p>rlChecked is a small, clean and efficient plugin cross-browser and keyboard accessible, tested even IE7.</p>
+<p>Now you can use pseudo-elements with @font-face icons</p>
+<p>I´m including a @font-face example, using FontAwesome https://github.com/FortAwesome/Font-Awesome and Ionicons https://github.com/driftyco/ionicons</p>
 
 <h2>Usage</h2>
 
 <h3>HTML</h3>
 
-  <!-- with li -->
+  <!-- with <li> -->
 
     <form>
       <fieldset>
@@ -39,7 +41,7 @@ A jQuery checkboxes and radio buttons plugin with keyboard accessibility navigat
         </ul>
       </fieldset>
 
-  <!-- or div -->
+  <!-- or <div> -->
 
       <fieldset>
         <legend>Radio Buttons</legend>
@@ -79,17 +81,21 @@ A jQuery checkboxes and radio buttons plugin with keyboard accessibility navigat
 
         $("input").rlChecked();
 
+        // with severals in the same projects
+        $("example1 input, example2 input, example3 input").rlChecked();
+
         // or with options
         $("input").rlChecked({
 
-          element: "<span>elements</span>", // html tag created to insert through the DOM
-          checkboxes: "checkboxes", // parent class of checkboxes
-          radios: "radios", // parent class of radio buttons
+          element: "<span></span>", // html tag created to insert through the DOM
+          checkboxes: "rlCheckboxes", // parent class of checkboxes
+          radios: "rlRadios", // parent class of radio buttons
           bg: "span", // reference a settings.element for make use like a variable
           check: "checked", // sign a class when a checkbox is checked
           radio: "radio", // sign a class when a radio button is checked
           focus: "focus", // sign a class when accessed with keyboard a checkbox or radio button element
           disable: "disabled", // sign a class when a checkbox or radio button element have the disabled attribute
+          disableChecked: "disabled-checked", // sign a class when a radio-button and checkbox element have the disabled and checked attribute, this behavior is necessary when have this attributes combination
           hover: "hover" // sign a class when hover a checkbox or radio button element
 
         });
@@ -107,14 +113,14 @@ A jQuery checkboxes and radio buttons plugin with keyboard accessibility navigat
 
 
 <h2>License</h2>
-<p>Copyright (c) 2013 Rodrigo Ludgero Licensed under the MIT license</p>
+<p>Copyright (c) 2014 Rodrigo Ludgero Licensed under the MIT license</p>
 
 <pre>
 <code>
 
 The MIT License
 
-Copyright (c) 2013 Rodrigo Ludgero, http://rodrigoludgero.com
+Copyright (c) 2014 Rodrigo Ludgero, http://rodrigoludgero.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
