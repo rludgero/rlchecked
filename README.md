@@ -109,7 +109,7 @@ A jQuery checkboxes and radio buttons plugin with keyboard accessibility navigat
 
 <h2>Demo:</h2>
 
-<p>http://rodrigoludgero.com/rlchecked/rlchecked.html</p>
+<p>rlchecked.html</p>
 
 
 <h2>License</h2>
